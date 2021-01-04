@@ -22,7 +22,7 @@ RUN apk update && apk add libpq make
 RUN apk add --virtual .build-deps gcc python-dev musl-dev postgresql-dev tzdata
 
 RUN cp /usr/share/zoneinfo/America/Indianapolis /etc/localtime
-RUN echo "America/Indianapolis" > /etc/timezone
+RUN echo "Europe/Belgrade" > /etc/timezone
 RUN apk del tzdata
 RUN pip install -r requirements/${BUILD_ENVIRONMENT}.txt
 
